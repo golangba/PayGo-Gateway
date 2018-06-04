@@ -1,4 +1,4 @@
-package sendRequest
+package sendrequest
 
 import (
 	"bytes"
@@ -40,7 +40,7 @@ func SendJSONRequest(rq PayGoRequest, method string) error {
 
 	//Checking status from response todo: check all response formats from any gateway
 	if response.StatusCode != http.StatusOK {
-		return fmt.Errorf("ocorreu um erro! StatusCode: %d", response.StatusCode)
+		return fmt.Errorf("something was wrong! StatusCode: %d", response.StatusCode)
 	}
 
 	body, err := ioutil.ReadAll(response.Body) // Reading body

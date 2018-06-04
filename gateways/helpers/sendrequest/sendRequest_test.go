@@ -1,4 +1,4 @@
-package sendRequest
+package sendrequest
 
 import (
 	"encoding/json"
