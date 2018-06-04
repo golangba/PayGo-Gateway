@@ -1,9 +1,28 @@
-# O Projeto
+# The PayGo Gateway Managers
 
-O projeto é mais uma solução do que uma aplicação, o intuito é prover um middleware para aplicações Go, sendo assim, iremos nos conectar ao gateway de pagamento do Mercado Pago para criar consultas de envio de cobrança, assinaturas e etc...
+Our project is a solution for connect Go (Golang) applications with Payments Gateways, we plan to connect many gateways. You'll be connect much gateways you want in only one application without worry to build all integrations.
 
-## Linguagem Utilizada
-A linguagem que estamos utilizando neste projeto é a Golang.
+## Gateways
+- [x] Mercado Pago (coding)
+- [ ] Moip
+- [ ] Pagseguro
+- [ ] Paypal (already exists, but will be conected)
+- [ ] Astropay
 
-## É oficial?
-Não! Não temos nenhum vinculo com o mercado pago.
+## Programming Language
+We choose a Go (Golang)
+
+## It's oficial?
+NO! We don't have any relation with the listed gateways
+
+## To Contribute
+Open a issue with all proposes and we'll analyse.
+
+## Installing
+Coming soon
+
+## Usage
+Coming soon
+
+## License
+Coming soon
