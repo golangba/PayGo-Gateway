@@ -1,22 +1,23 @@
 package sendRequest
 
 import (
-	"testing"
 	"encoding/json"
+	"testing"
 )
 
 type TestResquest struct {
-	Title string `json:"title"`
-	Body string `json:"body"`
-	UserId int64 `json:"userId"`
-	Response interface{}
+	ID     int    `json:"id, omitempty"`
+	Title  string `json:"title"`
+	Body   string `json:"body"`
+	UserId int64  `json:"userId"`
+	Response map[string]interface{} `json:"response, omitempty"`
 }
 
-func (t TestResquest) GetUrl() (string, error){
+func (t TestResquest) GetUrl() (string, error) {
 	return "https://jsonplaceholder.typicode.com/posts/", nil
 }
 
-func (t TestResquest) MarshalJSON() ([]byte, error){
+func (t TestResquest) GetJSON() ([]byte, error) {
 	j, err := json.Marshal(t)
 	if err != nil {
 		return nil, err
@@ -24,8 +25,8 @@ func (t TestResquest) MarshalJSON() ([]byte, error){
 	return j, nil
 }
 
-func (t *TestResquest) UnmarshalJSON(b []byte) error {
-	err := json.Unmarshal(b, t.Response)
+func (t *TestResquest) SetResponse(b []byte) error {
+	err := json.Unmarshal(b, &t.Response)
 	if err != nil {
 		return err
 	}
@@ -38,7 +39,7 @@ func TestSendRequest(t *testing.T) {
 	tr.Body = "bar"
 	tr.UserId = 1
 
-	err := SendRequest(tr, "POST")
+	err := SendJSONRequest(tr, "POST")
 	if err != nil {
 		t.Errorf("error on send Request: %s\n", err)
 	}
