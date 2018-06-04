@@ -19,3 +19,7 @@
 !.vscode/launch.json
 !.vscode/extensions.json
 .history
+
+
+# InteliJIDE
+./idea
