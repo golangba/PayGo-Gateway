@@ -1,2 +1,0 @@
-package payment_methods
-

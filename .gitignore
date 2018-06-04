@@ -21,3 +21,6 @@
 .history
 
 paygo
+
+# InteliJIDE
+.idea/
