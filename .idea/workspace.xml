@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ef9078f5-d771-4500-87e6-cd4db1918e46" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateways/mercadopago/accesstoken/accesstoken.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateways/mercadopago/accesstoken/accesstoken_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/mercadopago/cards/cards.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/mercadopago/cards/cards.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/mercadopago/cards/cards_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/mercadopago/cards/cards_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/mercadopago/customers/customers.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/mercadopago/customers/customers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/mercadopago/customers/customers_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/mercadopago/customers/customers_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/mercadopago/identification_type/identification_type.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/mercadopago/identification_type/identification_type.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/mercadopago/identification_type/identification_type_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/mercadopago/identification_type/identification_type_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/mercadopago/invoices/invoices.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/mercadopago/invoices/invoices.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/mercadopago/mercadopago.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/mercadopago/mercadopago.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/mercadopago/mercadopago_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/mercadopago/mercadopago_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/mercadopago/merchant_orders/merchant_orders.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/mercadopago/merchant_orders/merchant_orders.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/mercadopago/merchant_orders/merchant_orders_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/mercadopago/merchant_orders/merchant_orders_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/mercadopago/payment_methods/payment_methods.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/mercadopago/payment_methods/payment_methods.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/mercadopago/payment_methods/payment_methods_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/mercadopago/payment_methods/payment_methods_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/mercadopago/payments/payments.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/mercadopago/payments/payments.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/mercadopago/payments/payments_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/mercadopago/payments/payments_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/mercadopago/preferences/preferences.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/mercadopago/preferences/preferences.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/mercadopago/preferences/preferences_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/mercadopago/preferences/preferences_test.go" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="customers.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gateways/mercadopago/customers/customers.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="customers_test.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gateways/mercadopago/customers/customers_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="accesstoken.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gateways/mercadopago/accesstoken/accesstoken.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="49">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+              <folding>
+                <element signature="e#21#72#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="accesstoken_test.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gateways/mercadopago/accesstoken/accesstoken_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go Application" />
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>fmt.Errorf(err)</find>
+      <find>marshal(</find>
+      <find>return err</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>fmt.Errorf(err)</replace>
+      <replace>fmt.Errorf(&quot;%s\n&quot;,err)</replace>
+      <replace>return &quot;&quot;, err</replace>
+    </replaceStrings>
+  </component>
+  <component name="GOROOT" path="/usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/gateways/helpers/sendRequest/sendRequest_test.go" />
+        <option value="$PROJECT_DIR$/gateways/helpers/sendRequest/sendRequest.go" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/gateways/helpers/sendrequest/sendRequest.go" />
+        <option value="$PROJECT_DIR$/gateways/mercadopago/customers/customers.go" />
+        <option value="$PROJECT_DIR$/gateways/mercadopago/accesstoken/accesstoken_test.go" />
+        <option value="$PROJECT_DIR$/gateways/mercadopago/accesstoken/acesstoken.go" />
+        <option value="$PROJECT_DIR$/gateways/mercadopago/customers/customers_test.go" />
+        <option value="$PROJECT_DIR$/gateways/mercadopago/accesstoken/accesstoken.go" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="10" />
+    <option name="y" value="20" />
+    <option name="width" value="1346" />
+    <option name="height" value="701" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="PayGo-Gateway2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PayGo-Gateway2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PayGo-Gateway2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PayGo-Gateway2" type="462c0819:PsiDirectoryNode" />
+              <item name="gateways" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PayGo-Gateway2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PayGo-Gateway2" type="462c0819:PsiDirectoryNode" />
+              <item name="gateways" type="462c0819:PsiDirectoryNode" />
+              <item name="mercadopago" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PayGo-Gateway2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PayGo-Gateway2" type="462c0819:PsiDirectoryNode" />
+              <item name="gateways" type="462c0819:PsiDirectoryNode" />
+              <item name="mercadopago" type="462c0819:PsiDirectoryNode" />
+              <item name="accesstoken" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PayGo-Gateway2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PayGo-Gateway2" type="462c0819:PsiDirectoryNode" />
+              <item name="gateways" type="462c0819:PsiDirectoryNode" />
+              <item name="mercadopago" type="462c0819:PsiDirectoryNode" />
+              <item name="cards" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PayGo-Gateway2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PayGo-Gateway2" type="462c0819:PsiDirectoryNode" />
+              <item name="gateways" type="462c0819:PsiDirectoryNode" />
+              <item name="mercadopago" type="462c0819:PsiDirectoryNode" />
+              <item name="customers" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="go.gopath.indexing.explicitly.defined" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="TestSendRequest in PayGo-Gateway2/gateways/helpers/sendRequest" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="PayGo-Gateway2" />
+      <working_directory value="$PROJECT_DIR$/gateways/helpers/sendRequest" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="PayGo-Gateway2/gateways/helpers/sendRequest" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestSendRequest$" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Test.TestSendRequest in PayGo-Gateway2/gateways/helpers/sendRequest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TestHistory">
+    <history-entry file="TestSendRequest_in_PayGo-Gateway2_gateways_helpers_sendRequest - 2018.06.04 at 12h 56m 26s.xml">
+      <configuration name="TestSendRequest in PayGo-Gateway2/gateways/helpers/sendRequest" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestSendRequest_in_PayGo-Gateway2_gateways_helpers_sendRequest - 2018.06.04 at 12h 56m 59s.xml">
+      <configuration name="TestSendRequest in PayGo-Gateway2/gateways/helpers/sendRequest" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestSendRequest_in_PayGo-Gateway2_gateways_helpers_sendRequest - 2018.06.04 at 13h 05m 08s.xml">
+      <configuration name="TestSendRequest in PayGo-Gateway2/gateways/helpers/sendRequest" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestSendRequest_in_PayGo-Gateway2_gateways_helpers_sendRequest - 2018.06.04 at 13h 05m 38s.xml">
+      <configuration name="TestSendRequest in PayGo-Gateway2/gateways/helpers/sendRequest" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestSendRequest_in_PayGo-Gateway2_gateways_helpers_sendRequest - 2018.06.04 at 13h 06m 23s.xml">
+      <configuration name="TestSendRequest in PayGo-Gateway2/gateways/helpers/sendRequest" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestSendRequest_in_PayGo-Gateway2_gateways_helpers_sendRequest - 2018.06.04 at 13h 06m 45s.xml">
+      <configuration name="TestSendRequest in PayGo-Gateway2/gateways/helpers/sendRequest" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestSendRequest_in_PayGo-Gateway2_gateways_helpers_sendRequest - 2018.06.04 at 13h 07m 24s.xml">
+      <configuration name="TestSendRequest in PayGo-Gateway2/gateways/helpers/sendRequest" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestSendRequest_in_PayGo-Gateway2_gateways_helpers_sendRequest - 2018.06.04 at 13h 07m 50s.xml">
+      <configuration name="TestSendRequest in PayGo-Gateway2/gateways/helpers/sendRequest" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestSendRequest_in_PayGo-Gateway2_gateways_helpers_sendRequest - 2018.06.04 at 13h 09m 07s.xml">
+      <configuration name="TestSendRequest in PayGo-Gateway2/gateways/helpers/sendRequest" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestSendRequest_in_PayGo-Gateway2_gateways_helpers_sendRequest - 2018.06.04 at 13h 20m 10s.xml">
+      <configuration name="TestSendRequest in PayGo-Gateway2/gateways/helpers/sendRequest" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-1" y="0" width="1368" height="741" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25378788" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50151515" side_tool="true" weight="0.3284553" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3284553" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49848485" visible="true" weight="0.32682925" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/go.mod">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file:///usr/local/go/src/reflect/type.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="579" column="5" selection-start-line="579" selection-start-column="5" selection-end-line="579" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/go/src/encoding/json/encode.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="219" column="33" lean-forward="true" selection-start-line="219" selection-start-column="4" selection-end-line="219" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/go/src/encoding/json/decode.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="118" column="14" lean-forward="true" selection-start-line="118" selection-start-column="4" selection-end-line="118" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateways/helpers/sendrequest/sendRequest_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="332">
+            <caret line="28" selection-start-line="28" selection-end-line="28" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state>
+          <caret column="21" selection-start-column="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateways/mercadopago/identificationtype/identificationtype.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateways/mercadopago/merchantorders/merchantorders.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateways/mercadopago/payments/payments_test.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateways/helpers/sendrequest/sendRequest.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateways/mercadopago/accesstoken/accesstoken_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateways/mercadopago/customers/customers.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateways/mercadopago/customers/customers_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateways/mercadopago/accesstoken/accesstoken.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#21#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
