@@ -9,8 +9,7 @@ import (
 type PayGoRequest interface {
 	GetUrl() (string, error)
 	GetBody() ([]byte, error)
-	GetReqType() (string, error)
-	GetCharset() (string, error)
+	GetContentType() (string, error)
 	SetResponse([]byte) error
 }
 
@@ -29,7 +28,12 @@ func prepareRequest(rq PayGoRequest, method string) (*http.Request, error){
 	if err != nil {
 		return nil, err
 	}
-	request.Header.Set("Content-Type", "application/json;charset=utf-8") //Setting request Header
+
+	contentType, err := rq.GetContentType()
+	if err != nil {
+		return nil, err
+	}
+	request.Header.Set("Content-Type", contentType) //Setting request Header
 
 	return request, nil
 }

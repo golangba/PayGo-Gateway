@@ -18,6 +18,10 @@ func (t TestResquest) GetUrl() (string, error) {
 	return "https://jsonplaceholder.typicode.com/posts/", nil
 }
 
+func (t TestResquest) GetContentType() (string, error) {
+	return "application/json;charset=utf-8", nil
+}
+
 func (t TestResquest) GetBody() ([]byte, error) {
 	j, err := json.Marshal(t)
 	if err != nil {

@@ -19,6 +19,10 @@ func (c Credentials) GetUrl() (string, error) {
 	return c.url, nil
 }
 
+func (c Credentials) GetContentType() (string, error) {
+	return "application/json;charset=utf-8", nil
+}
+
 func (c Credentials) GetBody() ([]byte, error) {
 	j, err := json.Marshal(c)
 	if err != nil {
@@ -36,6 +40,6 @@ func (c *Credentials) SetResponse(b []byte) error {
 }
 
 
-func GetAccessToken(url string, c Credentials) (string, error){
+func GetAccessToken(url string, c Credentials){
 
 }
