@@ -22,7 +22,8 @@
 
 paygo
 
-# InteliJIDE
-.idea/
-.idea/workspace.xml
-
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
