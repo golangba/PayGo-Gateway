@@ -13,7 +13,6 @@ type Credentials struct {
 	GrantType    string `json:"grant_type"`
 	ClientId     string `json:"client_id"`
 	ClientSecret string `json:"client_secret"`
-	AccessToken string `json:"access_token, omnitempty"`
 	url string
 	err error
 	response map[string]interface{}
@@ -54,10 +53,13 @@ func GetAccessToken(url string,c Credentials) (string, error){
 		return "", fmt.Errorf("Error: %s", err)
 	}
 
-	if m, ok := c.response["message"]; !ok{
+	if m, ok := c.response["message"]; ok{
 		return "", fmt.Errorf("mercado pago message: %v", m)
 	}
 
+	if token, ok:=c.response["access_token"]; ok{
+		return fmt.Sprintf("%v",token), nil
+	}
 
-	return "", nil
+	return "", fmt.Errorf("some problems was encountered, please contact the developers")
 }
