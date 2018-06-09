@@ -1,4 +1,13 @@
 appVersion: 0.1
 appName: PayGoGateway
-config:
-  apiUrl: "https://api.mercadopago.com/"
+config: ""
+mercadopago:
+  config:
+    apiUrl: "https://api.mercadopago.com/"
+    apiVersion: "v1"
+    apiClientID: "7130376828807209"
+    apiClientSecret: "ylLotexirqboqPmqgtjOMXWfYOFh3VY4"
+    apiToken: ""
+    charset: "application/json;charset=utf-8"
+  routes:
+    accesstoken: "/oauth/token"

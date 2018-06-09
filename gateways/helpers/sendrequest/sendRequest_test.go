@@ -2,15 +2,15 @@ package sendrequest
 
 import (
 	"encoding/json"
-	"testing"
 	"fmt"
+	"testing"
 )
 
 type TestResquest struct {
-	ID     int    `json:"id, omitempty"`
-	Title  string `json:"title"`
-	Body   string `json:"body"`
-	UserId int64  `json:"userId"`
+	ID       int                    `json:"id, omitempty"`
+	Title    string                 `json:"title"`
+	Body     string                 `json:"body"`
+	UserId   int64                  `json:"userId"`
 	Response map[string]interface{} `json:"response, omitempty"`
 }
 
@@ -39,7 +39,7 @@ func (t *TestResquest) SetResponse(b []byte) error {
 }
 
 func TestSendRequest(t *testing.T) {
-	tr := new (TestResquest)
+	tr := new(TestResquest)
 	tr.Title = "foo"
 	tr.Body = "bar"
 	tr.UserId = 1

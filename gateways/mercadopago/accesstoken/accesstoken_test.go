@@ -1,26 +1,29 @@
 package accesstoken
 
 import (
-	"testing"
 	"fmt"
+	"testing"
+	"paygo/gateways/mercadopago"
 )
 
 func TestGetAccessToken(t *testing.T) {
-	c := Credentials{
-		GrantType: "client_credentials",
-		ClientId:"7130376828807209",
-		ClientSecret:"ylLotexirqboqPmqgtjOMXWfYOFh3VY4",
-	}
-	url := "https://api.mercadopago.com/oauth/token"
-
-	r, err:= GetAccessToken(url, c)
+	r, err := GetAccessToken()
 	checkTestError(err, t)
 	fmt.Println(r)
 }
 
-func checkTestError(err error, t *testing.T){
-	if err != nil{
+func TestUpdateToken(t *testing.T) {
+	config, err := mercadopago.GetConfig()
+	checkTestError(err, t)
+
+	err = UpdateToken(config)
+	checkTestError(err, t)
+	if len(config.ApiToken) == 0 {
+		t.Errorf("Token not set")
+	}
+}
+func checkTestError(err error, t *testing.T) {
+	if err != nil {
 		t.Errorf("Error: %s", err)
 	}
 }
-

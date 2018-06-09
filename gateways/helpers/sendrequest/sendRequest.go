@@ -13,7 +13,7 @@ type PayGoRequest interface {
 	SetResponse([]byte) error
 }
 
-func prepareRequest(rq PayGoRequest, method string) (*http.Request, error){
+func prepareRequest(rq PayGoRequest, method string) (*http.Request, error) {
 	url, err := rq.GetUrl() //Get Url from PayGoRequest Interface
 	if err != nil {
 		return nil, err

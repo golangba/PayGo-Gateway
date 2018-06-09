@@ -2,8 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef9078f5-d771-4500-87e6-cd4db1918e46" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/gateways.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/gateways.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/gateways_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/gateways_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/helpers/sendrequest/sendRequest.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/helpers/sendrequest/sendRequest.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/helpers/sendrequest/sendRequest_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/helpers/sendrequest/sendRequest_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateways/mercadopago/accesstoken/accesstoken.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/mercadopago/accesstoken/accesstoken.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/mercadopago/accesstoken/accesstoken_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/mercadopago/accesstoken/accesstoken_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/mercadopago/cards/cards.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/mercadopago/cards/cards.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/mercadopago/cards/cards_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/mercadopago/cards/cards_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/mercadopago/customers/customers.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/mercadopago/customers/customers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/mercadopago/customers/customers_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/mercadopago/customers/customers_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/mercadopago/identificationtype/identificationtype.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/mercadopago/identificationtype/identificationtype.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/mercadopago/identificationtype/identificationtype_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/mercadopago/identificationtype/identificationtype_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/mercadopago/invoices/invoices.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/mercadopago/invoices/invoices.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/mercadopago/mercadopago.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/mercadopago/mercadopago.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/mercadopago/mercadopago_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/mercadopago/mercadopago_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/mercadopago/merchantorders/merchantorders.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/mercadopago/merchantorders/merchantorders.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/mercadopago/merchantorders/merchantorders_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/mercadopago/merchantorders/merchantorders_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/mercadopago/paymentmethods/paymentmethods.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/mercadopago/paymentmethods/paymentmethods.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/mercadopago/paymentmethods/paymentmethods_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/mercadopago/paymentmethods/paymentmethods_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/mercadopago/payments/payments.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/mercadopago/payments/payments.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/mercadopago/payments/payments_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/mercadopago/payments/payments_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/mercadopago/preferences/preferences.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/mercadopago/preferences/preferences.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateways/mercadopago/preferences/preferences_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/gateways/mercadopago/preferences/preferences_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,42 +46,52 @@
       <file leaf-file-name="accesstoken.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gateways/mercadopago/accesstoken/accesstoken.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="57" column="5" lean-forward="true" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+            <state relative-caret-position="120">
+              <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="accesstoken_test.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="accesstoken_test.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gateways/mercadopago/accesstoken/accesstoken_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sendRequest.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gateways/helpers/sendrequest/sendRequest.go">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+              <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="config.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/config.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="60">
+              <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="go.mod" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/go.mod">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="mercadopago.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gateways/mercadopago/mercadopago.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+              <folding>
+                <element signature="e#21#64#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mercadopago_test.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gateways/mercadopago/mercadopago_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+              <folding>
+                <element signature="e#21#49#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -93,11 +132,13 @@
         <option value="$PROJECT_DIR$/gateways/mercadopago/sendrequest/sendRequest.go" />
         <option value="$PROJECT_DIR$/gateways/mercadopago/sendrequest/sendRequest_test.go" />
         <option value="$PROJECT_DIR$/gateways/helpers/sendrequest/sendRequest_test.go" />
-        <option value="$PROJECT_DIR$/gateways/mercadopago/mercadopago.go" />
         <option value="$PROJECT_DIR$/gateways/helpers/sendrequest/sendRequest.go" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/gateways/mercadopago/accesstoken/accesstoken.go" />
         <option value="$PROJECT_DIR$/gateways/mercadopago/accesstoken/accesstoken_test.go" />
+        <option value="$PROJECT_DIR$/gateways/mercadopago/mercadopago_test.go" />
+        <option value="$PROJECT_DIR$/config/config.yaml" />
+        <option value="$PROJECT_DIR$/gateways/mercadopago/accesstoken/accesstoken.go" />
+        <option value="$PROJECT_DIR$/gateways/mercadopago/mercadopago.go" />
       </list>
     </option>
   </component>
@@ -141,22 +182,7 @@
             </path>
             <path>
               <item name="PayGo-Gateway2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PayGo-Gateway2" type="462c0819:PsiDirectoryNode" />
-              <item name="gateways" type="462c0819:PsiDirectoryNode" />
-              <item name="helpers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PayGo-Gateway2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PayGo-Gateway2" type="462c0819:PsiDirectoryNode" />
-              <item name="gateways" type="462c0819:PsiDirectoryNode" />
-              <item name="helpers" type="462c0819:PsiDirectoryNode" />
-              <item name="sendrequest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PayGo-Gateway2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PayGo-Gateway2" type="462c0819:PsiDirectoryNode" />
-              <item name="gateways" type="462c0819:PsiDirectoryNode" />
-              <item name="mercadopago" type="462c0819:PsiDirectoryNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
             </path>
           </expand>
           <select />
@@ -203,16 +229,27 @@
       <filePath value="$PROJECT_DIR$/" />
       <pattern value="^TestGetAccessToken$" />
     </configuration>
-    <configuration name="TestSendRequest in PayGo-Gateway2/gateways/helpers/sendRequest" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestGetConfig in PayGo-Gateway2/gateways/mercadopago" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="PayGo-Gateway2" />
-      <working_directory value="$PROJECT_DIR$/gateways/helpers/sendRequest" />
+      <working_directory value="$PROJECT_DIR$/gateways/mercadopago" />
       <go_parameters value="-i" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="PayGo-Gateway2/gateways/helpers/sendRequest" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestSendRequest$" />
+      <package value="PayGo-Gateway2/gateways/mercadopago" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^TestGetConfig$" />
+    </configuration>
+    <configuration name="TestGetRoute in PayGo-Gateway2/gateways/mercadopago" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="PayGo-Gateway2" />
+      <working_directory value="$PROJECT_DIR$/gateways/mercadopago" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="PayGo-Gateway2/gateways/mercadopago" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^TestGetRoute$" />
     </configuration>
     <configuration name="TestSendRequest in PayGo-Gateway2/gateways/helpers/sendrequest" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="PayGo-Gateway2" />
@@ -237,54 +274,57 @@
       <pattern value="^TestSendRequest$" />
     </configuration>
     <list>
-      <item itemvalue="Go Test.TestSendRequest in PayGo-Gateway2/gateways/helpers/sendRequest" />
       <item itemvalue="Go Test.TestSendRequest in PayGo-Gateway2/gateways/mercadopago/sendrequest" />
       <item itemvalue="Go Test.TestSendRequest in PayGo-Gateway2/gateways/helpers/sendrequest" />
       <item itemvalue="Go Test.TestGetAccessToken in PayGo-Gateway2/gateways/mercadopago/accesstoken" />
+      <item itemvalue="Go Test.TestGetConfig in PayGo-Gateway2/gateways/mercadopago" />
+      <item itemvalue="Go Test.TestGetRoute in PayGo-Gateway2/gateways/mercadopago" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Go Test.TestGetAccessToken in PayGo-Gateway2/gateways/mercadopago/accesstoken" />
+        <item itemvalue="Go Test.TestGetConfig in PayGo-Gateway2/gateways/mercadopago" />
+        <item itemvalue="Go Test.TestGetRoute in PayGo-Gateway2/gateways/mercadopago" />
         <item itemvalue="Go Test.TestSendRequest in PayGo-Gateway2/gateways/helpers/sendrequest" />
         <item itemvalue="Go Test.TestSendRequest in PayGo-Gateway2/gateways/mercadopago/sendrequest" />
-        <item itemvalue="Go Test.TestSendRequest in PayGo-Gateway2/gateways/helpers/sendRequest" />
       </list>
     </recent_temporary>
   </component>
   <component name="TestHistory">
-    <history-entry file="TestGetAccessToken_in_PayGo-Gateway2_gateways_mercadopago_accesstoken - 2018.06.09 at 16h 40m 51s.xml">
+    <history-entry file="TestGetRoute_in_PayGo-Gateway2_gateways_mercadopago - 2018.06.09 at 18h 41m 35s.xml">
+      <configuration name="TestGetRoute in PayGo-Gateway2/gateways/mercadopago" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestGetAccessToken_in_PayGo-Gateway2_gateways_mercadopago_accesstoken - 2018.06.09 at 18h 59m 25s.xml">
       <configuration name="TestGetAccessToken in PayGo-Gateway2/gateways/mercadopago/accesstoken" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestGetAccessToken_in_PayGo-Gateway2_gateways_mercadopago_accesstoken - 2018.06.09 at 16h 44m 58s.xml">
+    <history-entry file="TestGetConfig_in_PayGo-Gateway2_gateways_mercadopago - 2018.06.09 at 18h 59m 51s.xml">
+      <configuration name="TestGetConfig in PayGo-Gateway2/gateways/mercadopago" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestGetConfig_in_PayGo-Gateway2_gateways_mercadopago - 2018.06.09 at 19h 01m 04s.xml">
+      <configuration name="TestGetConfig in PayGo-Gateway2/gateways/mercadopago" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestGetConfig_in_PayGo-Gateway2_gateways_mercadopago - 2018.06.09 at 19h 01m 57s.xml">
+      <configuration name="TestGetConfig in PayGo-Gateway2/gateways/mercadopago" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestGetConfig_in_PayGo-Gateway2_gateways_mercadopago - 2018.06.09 at 19h 02m 10s.xml">
+      <configuration name="TestGetConfig in PayGo-Gateway2/gateways/mercadopago" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestGetConfig_in_PayGo-Gateway2_gateways_mercadopago - 2018.06.09 at 19h 02m 38s.xml">
+      <configuration name="TestGetConfig in PayGo-Gateway2/gateways/mercadopago" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestGetAccessToken_in_PayGo-Gateway2_gateways_mercadopago_accesstoken - 2018.06.09 at 19h 04m 59s.xml">
       <configuration name="TestGetAccessToken in PayGo-Gateway2/gateways/mercadopago/accesstoken" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestGetAccessToken_in_PayGo-Gateway2_gateways_mercadopago_accesstoken - 2018.06.09 at 16h 48m 11s.xml">
+    <history-entry file="TestGetAccessToken_in_PayGo-Gateway2_gateways_mercadopago_accesstoken - 2018.06.09 at 19h 08m 09s.xml">
       <configuration name="TestGetAccessToken in PayGo-Gateway2/gateways/mercadopago/accesstoken" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestGetAccessToken_in_PayGo-Gateway2_gateways_mercadopago_accesstoken - 2018.06.09 at 16h 48m 54s.xml">
-      <configuration name="TestGetAccessToken in PayGo-Gateway2/gateways/mercadopago/accesstoken" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestGetAccessToken_in_PayGo-Gateway2_gateways_mercadopago_accesstoken - 2018.06.09 at 16h 50m 36s.xml">
-      <configuration name="TestGetAccessToken in PayGo-Gateway2/gateways/mercadopago/accesstoken" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestGetAccessToken_in_PayGo-Gateway2_gateways_mercadopago_accesstoken - 2018.06.09 at 16h 51m 16s.xml">
-      <configuration name="TestGetAccessToken in PayGo-Gateway2/gateways/mercadopago/accesstoken" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestGetAccessToken_in_PayGo-Gateway2_gateways_mercadopago_accesstoken - 2018.06.09 at 16h 52m 17s.xml">
-      <configuration name="TestGetAccessToken in PayGo-Gateway2/gateways/mercadopago/accesstoken" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestGetAccessToken_in_PayGo-Gateway2_gateways_mercadopago_accesstoken - 2018.06.09 at 16h 54m 28s.xml">
-      <configuration name="TestGetAccessToken in PayGo-Gateway2/gateways/mercadopago/accesstoken" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestGetAccessToken_in_PayGo-Gateway2_gateways_mercadopago_accesstoken - 2018.06.09 at 16h 54m 44s.xml">
-      <configuration name="TestGetAccessToken in PayGo-Gateway2/gateways/mercadopago/accesstoken" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestGetAccessToken_in_PayGo-Gateway2_gateways_mercadopago_accesstoken - 2018.06.09 at 17h 04m 04s.xml">
+    <history-entry file="TestGetAccessToken_in_PayGo-Gateway2_gateways_mercadopago_accesstoken - 2018.06.09 at 19h 12m 31s.xml">
       <configuration name="TestGetAccessToken in PayGo-Gateway2/gateways/mercadopago/accesstoken" configurationId="GoTestRunConfiguration" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="741" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2659091" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -292,9 +332,9 @@
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3284553" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3284553" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49848485" visible="true" weight="0.32520324" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49848485" weight="0.32520324" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -312,36 +352,12 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gateways/mercadopago/customers/customers_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gateways/mercadopago/accesstoken/accesstoken_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gateways/mercadopago/accesstoken/accesstoken.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/go.mod">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -559,13 +575,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gateways/mercadopago/identification_type/identification_type_test.go" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/go/src/reflect/type.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -587,19 +596,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.yaml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gateways/mercadopago/mercadopago.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="19" selection-start-column="19" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/go.mod">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file:///usr/local/go/src/builtin/builtin.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -614,17 +610,67 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateways/gateways_test.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/go.mod">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../github.com/spf13/viper/viper.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-96">
+          <caret line="1136" column="5" selection-start-line="1136" selection-start-column="5" selection-end-line="1136" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gateways/mercadopago/accesstoken/accesstoken.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="57" column="5" lean-forward="true" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+        <state relative-caret-position="120">
+          <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateways/mercadopago/mercadopago_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+          <folding>
+            <element signature="e#21#49#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gateways/mercadopago/accesstoken/accesstoken_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+        <state relative-caret-position="120">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateways/mercadopago/mercadopago.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+          <folding>
+            <element signature="e#21#64#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

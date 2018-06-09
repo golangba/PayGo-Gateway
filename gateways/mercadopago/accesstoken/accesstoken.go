@@ -3,34 +3,40 @@ package accesstoken
 import (
 	"encoding/json"
 	"fmt"
-	"PayGo-Gateway2/gateways/helpers/sendrequest"
+	"paygo/gateways/helpers/sendrequest"
+	"paygo/gateways/mercadopago"
+	"github.com/spf13/viper"
 )
 
-type resultCredentials struct {
-
-}
-type Credentials struct {
+type credentials struct {
 	GrantType    string `json:"grant_type"`
 	ClientId     string `json:"client_id"`
 	ClientSecret string `json:"client_secret"`
-	url string
-	err error
-	response map[string]interface{}
+	response     map[string]interface{}
 }
-func (c Credentials) GetUrl() (string, error) {
-	if len(c.url) == 0{
-		return "", fmt.Errorf("the url not yet implemented")
+
+func (c credentials) GetUrl() (string, error) {
+	conf, err := mercadopago.GetConfig()
+	if err != nil {
+		return "", err
 	}
-
-	return c.url, nil
+	route, err := mercadopago.GetRoute("accesstoken")
+	if err != nil {
+		return "", err
+	}
+	url := fmt.Sprintf("%s%s", conf.ApiUrl, route)
+	return url, nil
 }
 
-func (c Credentials) GetContentType() (string, error) {
-	return "application/json;charset=utf-8", nil
+func (c credentials) GetContentType() (string, error) {
+	conf, err := mercadopago.GetConfig()
+	if err != nil {
+		return "", err
+	}
+	return conf.Charset, nil
 }
 
-func (c *Credentials) GetBody() ([]byte, error) {
-
+func (c *credentials) GetBody() ([]byte, error) {
 	j, err := json.Marshal(c)
 	if err != nil {
 		return nil, err
@@ -38,7 +44,7 @@ func (c *Credentials) GetBody() ([]byte, error) {
 	return j, nil
 }
 
-func (c *Credentials) SetResponse(b []byte) error {
+func (c *credentials) SetResponse(b []byte) error {
 	err := json.Unmarshal(b, &c.response)
 	if err != nil {
 		return err
@@ -46,20 +52,38 @@ func (c *Credentials) SetResponse(b []byte) error {
 	return nil
 }
 
-func GetAccessToken(url string,c Credentials) (string, error){
-	c.url = url
-	_, err:=sendrequest.SendRequest(&c, "POST")
+func GetAccessToken() (string, error) {
+	conf, err := mercadopago.GetConfig()
 	if err != nil {
 		return "", fmt.Errorf("Error: %s", err)
 	}
+	c := new(credentials)
+	c.GrantType = "client_credentials"
+	c.ClientId = conf.ApiClientID
+	c.ClientSecret = conf.ApiClientSecret
 
-	if m, ok := c.response["message"]; ok{
+	_, err = sendrequest.SendRequest(c, "POST")
+	if err != nil {
+		return "", err
+	}
+
+	if m, ok := c.response["message"]; ok {
 		return "", fmt.Errorf("mercado pago message: %v", m)
 	}
 
-	if token, ok:=c.response["access_token"]; ok{
-		return fmt.Sprintf("%v",token), nil
+	if token, ok := c.response["access_token"]; ok {
+		return fmt.Sprintf("%v", token), nil
 	}
 
 	return "", fmt.Errorf("some problems was encountered, please contact the developers")
+}
+
+func UpdateToken(c *mercadopago.Config) error{
+	token, err := GetAccessToken()
+	if err != nil { // Handle errors reading the config file
+		return err
+	}
+	viper.Set("mercadopago.config.apiToken", token)
+	c.ApiToken = token
+	return nil
 }
