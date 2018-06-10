@@ -8,7 +8,7 @@ import (
 
 type PayGoRequest interface {
 	GetUrl() (string, error)
-	GetBody() ([]byte, error)
+	GetBody(request PayGoRequest) ([]byte, error)
 	GetContentType() (string, error)
 	SetResponse([]byte) error
 }
@@ -19,7 +19,7 @@ func prepareRequest(rq PayGoRequest, method string) (*http.Request, error) {
 		return nil, err
 	}
 
-	rqBody, err := rq.GetBody() //Turns interface into json
+	rqBody, err := rq.GetBody(rq) //Turns interface into json
 	if err != nil {
 		return nil, err
 	}

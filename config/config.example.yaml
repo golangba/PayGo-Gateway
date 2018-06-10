@@ -1,7 +1,7 @@
 appVersion: 0.1
 appName: PayGoGateway
 config: ""
-mercadopago:
+config:
   config:
     apiUrl: ""
     apiVersion: ""
@@ -11,3 +11,7 @@ mercadopago:
     charset:
   routes:
     accesstoken: "/oauth/token"
+    customers:
+      common: "/customers"
+      search: "/customers/search"
+    identificationType: "/identification_types"

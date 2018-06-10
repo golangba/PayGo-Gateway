@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"paygo/gateways/mercadopago"
+	"github.com/golangba/PayGo-Gateway/gateways/mercadopago/config"
 )
 
 func TestGetAccessToken(t *testing.T) {
@@ -14,12 +14,12 @@ func TestGetAccessToken(t *testing.T) {
 }
 
 func TestUpdateToken(t *testing.T) {
-	config, err := mercadopago.GetConfig()
+	conf, err := config.GetConfig()
 	checkTestError(err, t)
 
-	err = UpdateToken(config)
+	err = UpdateToken(conf)
 	checkTestError(err, t)
-	if len(config.ApiToken) == 0 {
+	if len(conf.ApiToken) == 0 {
 		t.Errorf("Token not set")
 	}
 }

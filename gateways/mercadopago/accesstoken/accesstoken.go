@@ -4,12 +4,14 @@ import (
 	"encoding/json"
 	"fmt"
 
+	"github.com/golangba/PayGo-Gateway/gateways/helpers/sendrequest"
+	"github.com/golangba/PayGo-Gateway/gateways/mercadopago"
+	"github.com/golangba/PayGo-Gateway/gateways/mercadopago/config"
 	"github.com/spf13/viper"
-	"paygo/gateways/helpers/sendrequest"
-	"paygo/gateways/mercadopago"
 )
 
 type credentials struct {
+	mercadopago.MercadoPagoBase
 	GrantType    string `json:"grant_type"`
 	ClientId     string `json:"client_id"`
 	ClientSecret string `json:"client_secret"`
@@ -17,32 +19,16 @@ type credentials struct {
 }
 
 func (c credentials) GetUrl() (string, error) {
-	conf, err := mercadopago.GetConfig()
+	conf, err := config.GetConfig()
 	if err != nil {
 		return "", err
 	}
-	route, err := mercadopago.GetRoute("accesstoken")
+	route, err := config.GetRoute("accesstoken")
 	if err != nil {
 		return "", err
 	}
 	url := fmt.Sprintf("%s%s", conf.ApiUrl, route)
 	return url, nil
-}
-
-func (c credentials) GetContentType() (string, error) {
-	conf, err := mercadopago.GetConfig()
-	if err != nil {
-		return "", err
-	}
-	return conf.Charset, nil
-}
-
-func (c *credentials) GetBody() ([]byte, error) {
-	j, err := json.Marshal(c)
-	if err != nil {
-		return nil, err
-	}
-	return j, nil
 }
 
 func (c *credentials) SetResponse(b []byte) error {
@@ -54,7 +40,7 @@ func (c *credentials) SetResponse(b []byte) error {
 }
 
 func GetAccessToken() (string, error) {
-	conf, err := mercadopago.GetConfig()
+	conf, err := config.GetConfig()
 	if err != nil {
 		return "", fmt.Errorf("Error: %s", err)
 	}
@@ -80,12 +66,12 @@ func GetAccessToken() (string, error) {
 	return "", fmt.Errorf("some problems was encountered, please contact the developers")
 }
 
-func UpdateToken(c *mercadopago.Config) error {
+func UpdateToken(c *config.Config) error {
 	token, err := GetAccessToken()
 	if err != nil { // Handle errors reading the config file
 		return err
 	}
-	viper.Set("mercadopago.config.apiToken", token)
+	viper.Set("config.config.apiToken", token)
 	c.ApiToken = token
 	return nil
 }
