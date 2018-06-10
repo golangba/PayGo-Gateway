@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/spf13/viper"
+	"paygo/gateways/mercadopago/accesstoken"
 )
 
 type Config struct {
@@ -45,6 +46,7 @@ func GetConfig() (*Config, error) {
 }
 
 func GetRoute(r string) (string, error) {
+	accesstoken.GetAccessToken()
 	routeName := fmt.Sprintf("mercadopago.routes.%s", r)
 	route := viper.GetString(routeName)
 	if len(route) == 0 {
