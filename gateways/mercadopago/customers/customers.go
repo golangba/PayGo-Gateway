@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"github.com/golangba/PayGo-Gateway/gateways/mercadopago"
 	"github.com/golangba/PayGo-Gateway/gateways/mercadopago/config"
+	"github.com/golangba/PayGo-Gateway/gateways/mercadopago/accesstoken"
+	"github.com/golangba/PayGo-Gateway/gateways/helpers/sendrequest"
 )
 
 type Phone struct {
@@ -21,7 +23,7 @@ type Address struct {
 	ID           string `json:"id, ominitempty"`
 	ZipCode      string `json:"zip_code"`
 	StreetName   string `json:"street_name"`
-	StreetNumber string `json:"street_number, omnitempty"`
+	StreetNumber uint `json:"street_number, omnitempty"`
 }
 
 type Customer struct {
@@ -38,15 +40,15 @@ type Customer struct {
 	Description     string                      `json:"description"`
 	DateCreated     string                      `json:"date_created, omnitempty"`
 	DateLastUpdated string                      `json:"date_last_updated, omnitempty"`
-	Metadata        string                      `json:"metadata, omnitempty"`
+	Metadata        interface{}                      `json:"metadata, omnitempty"`
 	DefaultCard     string                      `json:"default_card, omnitempty"`
 	DefaultAddress  string                      `json:"default_address, omnitempty"`
-	Cards           map[interface{}]interface{} `json:"cards, omnitempty"`
-	Addresses       map[interface{}]interface{} `json:"addresses, omnitempty"`
+	Cards           map[string]interface{} `json:"cards, omnitempty"`
+	Addresses       map[string]interface{} `json:"addresses, omnitempty"`
 	LiveMode        bool                        `json:"live_mode, omnitempty"`
 }
 
-type action int
+type action uint8
 
 const create action = 1
 const get action = 2
@@ -74,28 +76,40 @@ func (c *Customer) SetResponse(b []byte) error {
 }
 
 func CreateCustomer(c *Customer) (bool, error) {
-	return false, fmt.Errorf("not implemented yet")
+	c.action = create
+	_, err :=sendrequest.SendRequest(c, "POST")
+	if err != nil {
+		return false, err
+	}
+	return true, nil
 }
 
 func mountUrl(c Customer, conf *config.Config) (string, error) {
 	var url string
 	routeName := "common"
-	switch c.action {
-	case get, update:
-		route, err := config.GetRoute(fmt.Sprintf("customer.%s", routeName))
+
+	if len(conf.ApiToken) == 0 {
+		err := accesstoken.UpdateToken(conf)
 		if err != nil {
 			return "", err
 		}
-		url = fmt.Sprintf("%s%s/%s", conf.ApiUrl, route, c.ID)
+	}
+	switch c.action {
+	case get, update:
+		route, err := config.GetRoute(fmt.Sprintf("customers.%s", routeName))
+		if err != nil {
+			return "", err
+		}
+		url = fmt.Sprintf("%s/%s%s/%s?access_token=%s", conf.ApiUrl, conf.ApiVersion, route, c.ID, conf.ApiToken)
 	case search:
 		routeName = "search"
 		fallthrough
 	case create:
-		route, err := config.GetRoute(fmt.Sprintf("customer.%s", routeName))
+		route, err := config.GetRoute(fmt.Sprintf("customers.%s", routeName))
 		if err != nil {
 			return "", err
 		}
-		url = fmt.Sprintf("%s%s", conf.ApiUrl, route)
+		url = fmt.Sprintf("%s/%s%s?access_token=%s", conf.ApiUrl, conf.ApiVersion, route, conf.ApiToken)
 	default:
 		return "", fmt.Errorf("user action not allowed")
 	}

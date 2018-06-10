@@ -3,12 +3,13 @@ appName: PayGoGateway
 config: ""
 config:
   config:
-    apiUrl: ""
-    apiVersion: ""
-    apiClientID: ""
-    apiClientSecret: ""
-    apiToken: ""
-    charset:
+    apiUrl: "https://api.mercadopago.com"
+    apiVersion: "v1"
+    apiClientID: "your-client-id"
+    apiClientSecret: "your-client-secret"
+    apiPublicKey: "your-public-key"
+    apiToken: "your-access-token"
+    charset: "application/json;charset=utf-8"
   routes:
     accesstoken: "/oauth/token"
     customers:

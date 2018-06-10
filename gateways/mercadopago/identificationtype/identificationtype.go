@@ -15,8 +15,8 @@ type IdentificationType struct {
 	ID        string `json:"id, omnitempty"`
 	Name      string `json:"name"`
 	Type      string `json:"type"`
-	MinLength int    `json:"min_length"`
-	MaxLength int    `json:"max_length"`
+	MinLength uint   `json:"min_length"`
+	MaxLength uint   `json:"max_length"`
 }
 
 var response []IdentificationType
@@ -31,7 +31,10 @@ func (i IdentificationType) GetUrl() (string, error) {
 		return "", err
 	}
 	if len(conf.ApiToken) == 0 {
-		accesstoken.UpdateToken(conf)
+		err = accesstoken.UpdateToken(conf)
+		if err != nil {
+			return "", err
+		}
 	}
 	url := fmt.Sprintf("%s%s?access_token=%s", conf.ApiUrl, route, conf.ApiToken)
 	return url, nil
