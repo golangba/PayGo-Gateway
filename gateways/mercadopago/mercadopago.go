@@ -18,10 +18,10 @@ type Config struct {
 var conf *Config
 
 func init() {
-	viper.SetConfigName("config")             // name of config file (without extension)
-	viper.AddConfigPath("/etc/paygo/config/") // path to look for the config file in
+	viper.SetConfigName("config")
+	viper.AddConfigPath("/etc/paygo/config/")
 	viper.AddConfigPath("$HOME/.paygo/config/")
-	viper.AddConfigPath("$HOME/go/src/paygo/config/")
+	viper.AddConfigPath("$HOME/go/src/github/golangba/PayGo-Gateway/config/")
 
 	err := viper.ReadInConfig()
 	if err != nil { // Handle errors reading the config file
