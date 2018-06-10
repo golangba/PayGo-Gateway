@@ -2,6 +2,7 @@ package mercadopago
 
 import (
 	"fmt"
+
 	"github.com/spf13/viper"
 )
 
@@ -11,7 +12,7 @@ type Config struct {
 	ApiClientID     string
 	ApiClientSecret string
 	ApiToken        string
-	Charset        string
+	Charset         string
 }
 
 var conf *Config

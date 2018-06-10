@@ -3,9 +3,10 @@ package accesstoken
 import (
 	"encoding/json"
 	"fmt"
+
+	"github.com/spf13/viper"
 	"paygo/gateways/helpers/sendrequest"
 	"paygo/gateways/mercadopago"
-	"github.com/spf13/viper"
 )
 
 type credentials struct {
@@ -57,12 +58,13 @@ func GetAccessToken() (string, error) {
 	if err != nil {
 		return "", fmt.Errorf("Error: %s", err)
 	}
-	c := new(credentials)
-	c.GrantType = "client_credentials"
-	c.ClientId = conf.ApiClientID
-	c.ClientSecret = conf.ApiClientSecret
+	c := credentials{
+		GrantType:    "client_credentials",
+		ClientId:     conf.ApiClientID,
+		ClientSecret: conf.ApiClientSecret,
+	}
 
-	_, err = sendrequest.SendRequest(c, "POST")
+	_, err = sendrequest.SendRequest(&c, "POST")
 	if err != nil {
 		return "", err
 	}
@@ -78,7 +80,7 @@ func GetAccessToken() (string, error) {
 	return "", fmt.Errorf("some problems was encountered, please contact the developers")
 }
 
-func UpdateToken(c *mercadopago.Config) error{
+func UpdateToken(c *mercadopago.Config) error {
 	token, err := GetAccessToken()
 	if err != nil { // Handle errors reading the config file
 		return err
