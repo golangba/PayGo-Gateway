@@ -1,4 +1,0 @@
-appVersion: 0.1
-appName: PayGoGateway
-config:
-  apiUrl: "https://api.mercadopago.com/"

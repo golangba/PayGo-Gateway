@@ -21,3 +21,10 @@
 .history
 
 paygo
+
+# IntelliJ project files
+.idea
+*.iml
+config/config.yaml
+out
+gen

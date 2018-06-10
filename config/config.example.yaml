@@ -1,0 +1,13 @@
+appVersion: 0.1
+appName: PayGoGateway
+config: ""
+mercadopago:
+  config:
+    apiUrl: ""
+    apiVersion: ""
+    apiClientID: ""
+    apiClientSecret: ""
+    apiToken: ""
+    charset:
+  routes:
+    accesstoken: "/oauth/token"
