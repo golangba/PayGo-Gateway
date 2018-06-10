@@ -10,7 +10,16 @@ type PayGoRequest interface {
 	GetUrl() (string, error)
 	GetBody(request PayGoRequest) ([]byte, error)
 	GetContentType() (string, error)
+	GetMethod() string
 	SetResponse([]byte) error
+}
+
+var bodyMethodsAllowed map[string]bool
+
+func init() {
+	bodyMethodsAllowed = make(map[string]bool)
+	bodyMethodsAllowed["POST"] = true
+	bodyMethodsAllowed["PUT"] = true
 }
 
 func prepareRequest(rq PayGoRequest, method string) (*http.Request, error) {
@@ -19,9 +28,15 @@ func prepareRequest(rq PayGoRequest, method string) (*http.Request, error) {
 		return nil, err
 	}
 
-	rqBody, err := rq.GetBody(rq) //Turns interface into json
-	if err != nil {
-		return nil, err
+	bma, ok := bodyMethodsAllowed[method]
+	var rqBody []byte
+	if ok || bma {
+		rqBody, err = rq.GetBody(rq) //Turns interface into json
+		if err != nil {
+			return nil, err
+		}
+	} else {
+		rqBody = nil
 	}
 
 	request, err := http.NewRequest(method, url, bytes.NewBuffer(rqBody)) //Build a request
@@ -39,8 +54,8 @@ func prepareRequest(rq PayGoRequest, method string) (*http.Request, error) {
 }
 
 //
-func SendRequest(rq PayGoRequest, method string) (int, error) {
-	request, err := prepareRequest(rq, method)
+func SendRequest(rq PayGoRequest) (int, error) {
+	request, err := prepareRequest(rq, rq.GetMethod())
 	if err != nil {
 		return 0, err
 	}

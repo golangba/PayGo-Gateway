@@ -11,11 +11,11 @@ import (
 )
 
 type credentials struct {
-	mercadopago.MercadoPagoBase
-	GrantType    string `json:"grant_type"`
-	ClientId     string `json:"client_id"`
-	ClientSecret string `json:"client_secret"`
-	response     map[string]interface{}
+	mercadopago.MercadoPagoBase `json:"omitempty"`
+	GrantType                   string `json:"grant_type"`
+	ClientId                    string `json:"client_id"`
+	ClientSecret                string `json:"client_secret"`
+	response                    map[string]interface{}
 }
 
 func (c credentials) GetUrl() (string, error) {
@@ -29,6 +29,9 @@ func (c credentials) GetUrl() (string, error) {
 	}
 	url := fmt.Sprintf("%s%s", conf.ApiUrl, route)
 	return url, nil
+}
+func (c credentials) GetMethod() string {
+	return "POST"
 }
 
 func (c *credentials) SetResponse(b []byte) error {
@@ -50,7 +53,7 @@ func GetAccessToken() (string, error) {
 		ClientSecret: conf.ApiClientSecret,
 	}
 
-	_, err = sendrequest.SendRequest(&c, "POST")
+	_, err = sendrequest.SendRequest(&c)
 	if err != nil {
 		return "", err
 	}

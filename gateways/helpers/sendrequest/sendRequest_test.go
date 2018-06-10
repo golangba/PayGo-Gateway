@@ -22,12 +22,15 @@ func (t TestResquest) GetContentType() (string, error) {
 	return "application/json;charset=utf-8", nil
 }
 
-func (t TestResquest) GetBody() ([]byte, error) {
+func (t TestResquest) GetBody(request PayGoRequest) ([]byte, error) {
 	j, err := json.Marshal(t)
 	if err != nil {
 		return nil, err
 	}
 	return j, nil
+}
+func (t TestResquest) GetMethod() string {
+	return "POST"
 }
 
 func (t *TestResquest) SetResponse(b []byte) error {
@@ -44,7 +47,7 @@ func TestSendRequest(t *testing.T) {
 	tr.Body = "bar"
 	tr.UserId = 1
 
-	code, err := SendRequest(tr, "POST")
+	code, err := SendRequest(tr)
 	if err != nil {
 		t.Errorf("error on send Request: %s\n", err)
 	}

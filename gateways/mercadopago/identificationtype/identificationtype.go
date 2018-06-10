@@ -12,7 +12,7 @@ import (
 
 type IdentificationType struct {
 	mercadopago.MercadoPagoBase
-	ID        string `json:"id, omnitempty"`
+	ID        string `json:"id, omitempty"`
 	Name      string `json:"name"`
 	Type      string `json:"type"`
 	MinLength uint   `json:"min_length"`
@@ -39,6 +39,9 @@ func (i IdentificationType) GetUrl() (string, error) {
 	url := fmt.Sprintf("%s%s?access_token=%s", conf.ApiUrl, route, conf.ApiToken)
 	return url, nil
 }
+func (i IdentificationType) GetMethod() string {
+	return "GET"
+}
 
 func (i IdentificationType) SetResponse(b []byte) error {
 	err := json.Unmarshal(b, &response)
@@ -50,7 +53,7 @@ func (i IdentificationType) SetResponse(b []byte) error {
 
 func GetIdentificationTypes() ([]IdentificationType, error) {
 	i := IdentificationType{}
-	_, err := sendrequest.SendRequest(&i, "GET")
+	_, err := sendrequest.SendRequest(&i)
 	if err != nil {
 		return nil, err
 	}
