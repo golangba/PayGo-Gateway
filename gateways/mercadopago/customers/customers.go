@@ -98,6 +98,17 @@ func CreateCustomer(c *Customer) (bool, error) {
 	return true, nil
 }
 
+func GetCustomer(cid string) (*Customer, error) {
+	c := &Customer{action: get, ID: cid}
+
+	_, err := sendrequest.SendRequest(c)
+	if err != nil {
+		return nil, err
+	}
+
+	return c, nil
+}
+
 func mountUrl(c Customer, conf *config.Config) (string, error) {
 	var url string
 	routeName := "common"

@@ -21,8 +21,8 @@ func TestCreateCustomer(t *testing.T) {
 	}
 	r, err := CreateCustomer(&c)
 	checkTestError(err, t)
-	fmt.Println(r)
-	fmt.Println(c)
+	fmt.Printf("Request status: %t\n", r)
+	fmt.Printf("Costumer: %+v\n", c)
 }
 
 func TestSearchCustomer(t *testing.T) {
@@ -33,8 +33,20 @@ func TestSearchCustomer(t *testing.T) {
 	sc.Identification = Identification{Number: "05080749245"}
 	r, err := SearchCustomers(sc)
 	checkTestError(err, t)
-	fmt.Println(r)
+	fmt.Println("Users found")
+	for _, result := range r.Results {
+		fmt.Println(result.ID)
+	}
+
 }
+
+func TestGetCustomer(t *testing.T) {
+	cid := "327319823-TjF62w7HJBkxIy"
+	c, err := GetCustomer(cid)
+	checkTestError(err, t)
+	fmt.Printf("User found: %+v", c)
+}
+
 func checkTestError(err error, t *testing.T) {
 	if err != nil {
 		t.Errorf("Error: %s", err)
