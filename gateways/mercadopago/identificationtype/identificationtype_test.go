@@ -8,7 +8,6 @@ import (
 func TestGetIdentificationTypes(t *testing.T) {
 	i, err := GetIdentificationTypes()
 	checkTestError(err, t)
-	fmt.Println("ola")
 	fmt.Println(i)
 }
 

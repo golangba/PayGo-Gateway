@@ -19,7 +19,6 @@ type IdentificationType struct {
 	MaxLength uint   `json:"max_length"`
 }
 
-var response map[string]interface{}
 var responseId []IdentificationType
 
 func (i IdentificationType) GetUrl() (string, error) {
@@ -45,14 +44,7 @@ func (i IdentificationType) GetMethod() string {
 }
 
 func (i IdentificationType) SetResponse(b []byte) error {
-	err := json.Unmarshal(b, &response)
-	if err != nil {
-		return err
-	} else if m, ok := response["message"]; !ok {
-		return fmt.Errorf("mercado pago message: %v;\n Cause:%+v", m, response["cause"])
-	}
-
-	err = json.Unmarshal(b, responseId)
+	err := json.Unmarshal(b, &responseId)
 	if err != nil {
 		return err
 	}
