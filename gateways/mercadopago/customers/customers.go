@@ -87,7 +87,7 @@ func (c *Customer) SetResponse(b []byte) error {
 	err := json.Unmarshal(b, &response)
 	if err != nil {
 		return err
-	} else if m, ok:= response["message"]; ok{ //verifying if have messages from the mercadopago
+	} else if m, ok := response["message"]; ok { //verifying if have messages from the mercadopago
 		return fmt.Errorf("mercado pago message: %v;\n Cause:%+v", m, response["cause"])
 	}
 
@@ -99,7 +99,7 @@ func (c *Customer) SetResponse(b []byte) error {
 }
 
 //create and update customer
-func SaveCustomer(action action,c *Customer) (bool, error) {
+func SaveCustomer(action action, c *Customer) (bool, error) {
 	switch action {
 	case CREATE:
 		c.action = CREATE

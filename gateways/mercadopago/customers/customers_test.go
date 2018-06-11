@@ -5,9 +5,9 @@ import (
 	"testing"
 )
 
-func TestCreateCustomer(t *testing.T) {
+func TestSaveCustomer(t *testing.T) {
 	//creation test
-	 c := Customer{
+	c := Customer{
 		FirstName:      "Vitor",
 		LastName:       "Vicente Assunção",
 		Email:          "vitorvicenteassuncao_1@signainfo.com.br",
@@ -26,15 +26,15 @@ func TestCreateCustomer(t *testing.T) {
 	fmt.Printf("Costumer: %+v\n", c)
 
 	//update test
-	 c = Customer{
-		ID:             "327319823-TjF62w7HJBkxIy",
-		LastName:       "Vicente Assunção Souza",
+	c2 := Customer{
+		ID:          "327319823-TjF62w7HJBkxIy",
+		LastName:    "Vicente Assunção Souza",
 		Description: "updated",
 	}
-	r, err = SaveCustomer(UPDATE, &c)
+	r2, err := SaveCustomer(UPDATE, &c2)
 	checkTestError(err, t)
-	fmt.Printf("Request status: %t\n", r)
-	fmt.Printf("Costumer: %+v\n", c)
+	fmt.Printf("Request status: %t\n", r2)
+	fmt.Printf("Costumer: %+v\n", c2)
 }
 
 func TestSearchCustomer(t *testing.T) {
