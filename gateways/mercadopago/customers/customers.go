@@ -52,10 +52,10 @@ type Customer struct {
 type action uint8
 
 const (
-	create action = iota
-	get
-	update
-	search
+	CREATE action = iota
+	GET
+	UPDATE
+	SEARCH
 )
 
 var response map[string]interface{}
@@ -74,9 +74,9 @@ func (c Customer) GetUrl() (string, error) {
 
 func (c Customer) GetMethod() string {
 	switch c.action {
-	case create:
+	case CREATE:
 		return "POST"
-	case update:
+	case UPDATE:
 		return "PUT"
 	default:
 		return "GET"
@@ -87,7 +87,7 @@ func (c *Customer) SetResponse(b []byte) error {
 	err := json.Unmarshal(b, &response)
 	if err != nil {
 		return err
-	} else if m, ok:= response["message"]; ok{
+	} else if m, ok:= response["message"]; ok{ //verifying if have messages from the mercadopago
 		return fmt.Errorf("mercado pago message: %v;\n Cause:%+v", m, response["cause"])
 	}
 
@@ -98,19 +98,18 @@ func (c *Customer) SetResponse(b []byte) error {
 	return nil
 }
 
-func CreateCustomer(c *Customer) (bool, error) {
-	c.action = create
-	_, err := sendrequest.SendRequest(c)
-	if err != nil {
-		return false, err
+//create and update customer
+func SaveCustomer(action action,c *Customer) (bool, error) {
+	switch action {
+	case CREATE:
+		c.action = CREATE
+	case UPDATE:
+		c.action = UPDATE
+		if len(c.ID) == 0 {
+			return false, fmt.Errorf("invalid Customer.ID")
+		}
 	}
-	return true, nil
-}
-func UpdateCustomer(c *Customer) (bool, error) {
-	c.action = update
-	if len(c.ID) == 0 {
-		return false, fmt.Errorf("invalid Customer.ID")
-	}
+
 	_, err := sendrequest.SendRequest(c)
 	if err != nil {
 		return false, err
@@ -118,8 +117,9 @@ func UpdateCustomer(c *Customer) (bool, error) {
 	return true, nil
 }
 
+//return a customer by id
 func GetCustomer(cid string) (*Customer, error) {
-	c := &Customer{action: get, ID: cid}
+	c := &Customer{action: GET, ID: cid}
 	_, err := sendrequest.SendRequest(c)
 	if err != nil {
 		return nil, err
@@ -141,13 +141,13 @@ func mountUrl(c Customer, conf *config.Config) (string, error) {
 	urlParams := conf.ApiToken
 
 	switch c.action {
-	case get, update:
+	case GET, UPDATE:
 		route, err := config.GetRoute(fmt.Sprintf("customers.%s", routeName))
 		if err != nil {
 			return "", err
 		}
 		url = fmt.Sprintf("%s/%s%s/%s?access_token=%s", conf.ApiUrl, conf.ApiVersion, route, c.ID, urlParams)
-	case create:
+	case CREATE:
 		route, err := config.GetRoute(fmt.Sprintf("customers.%s", routeName))
 		if err != nil {
 			return "", err

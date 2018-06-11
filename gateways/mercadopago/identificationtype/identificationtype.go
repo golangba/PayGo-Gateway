@@ -59,6 +59,7 @@ func (i IdentificationType) SetResponse(b []byte) error {
 	return nil
 }
 
+//returns all personal identifications allowed to the client
 func GetIdentificationTypes() ([]IdentificationType, error) {
 	i := IdentificationType{}
 	_, err := sendrequest.SendRequest(&i)

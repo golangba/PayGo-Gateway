@@ -42,6 +42,7 @@ func (c *credentials) SetResponse(b []byte) error {
 	return nil
 }
 
+//returns access token that will be used in application
 func GetAccessToken() (string, error) {
 	conf, err := config.GetConfig()
 	if err != nil {

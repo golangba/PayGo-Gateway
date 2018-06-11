@@ -6,12 +6,13 @@ import (
 	"net/http"
 )
 
+//Interface used for send requests, prepare the data and set a response like the client wants
 type PayGoRequest interface {
-	GetUrl() (string, error)
-	GetBody(request PayGoRequest) ([]byte, error)
-	GetContentType() (string, error)
-	GetMethod() string
-	SetResponse([]byte) error
+	GetUrl() (string, error) //returns the url that will be used
+	GetBody(request PayGoRequest) ([]byte, error) //returns the body of request [nil case GET or DELETE]
+	GetContentType() (string, error) //returns the content-type from the application
+	GetMethod() string //method of the request
+	SetResponse([]byte) error //set the response and treat it
 }
 
 var bodyMethodsAllowed map[string]bool
@@ -53,7 +54,7 @@ func prepareRequest(rq PayGoRequest, method string) (*http.Request, error) {
 	return request, nil
 }
 
-//
+//Send the request to the gateway and set the response to client
 func SendRequest(rq PayGoRequest) (int, error) {
 	request, err := prepareRequest(rq, rq.GetMethod())
 	if err != nil {

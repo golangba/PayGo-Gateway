@@ -50,8 +50,9 @@ func (sc *SearchCustomersParams) SetResponse(b []byte) error {
 	return nil
 }
 
+//search customer and list them
 func SearchCustomers(sc SearchCustomersParams) (*SearchCustomersParams, error) {
-	sc.action = search
+	sc.action = SEARCH
 	_, err := sendrequest.SendRequest(&sc)
 	if err != nil {
 		return nil, err

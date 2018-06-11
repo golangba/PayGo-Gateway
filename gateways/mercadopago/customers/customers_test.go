@@ -6,7 +6,8 @@ import (
 )
 
 func TestCreateCustomer(t *testing.T) {
-	var c = Customer{
+	//creation test
+	 c := Customer{
 		FirstName:      "Vitor",
 		LastName:       "Vicente Assunção",
 		Email:          "vitorvicenteassuncao_1@signainfo.com.br",
@@ -19,14 +20,25 @@ func TestCreateCustomer(t *testing.T) {
 		},
 		Description: "lorem ipsum",
 	}
-	r, err := CreateCustomer(&c)
+	r, err := SaveCustomer(CREATE, &c)
+	checkTestError(err, t)
+	fmt.Printf("Request status: %t\n", r)
+	fmt.Printf("Costumer: %+v\n", c)
+
+	//update test
+	 c = Customer{
+		ID:             "327319823-TjF62w7HJBkxIy",
+		LastName:       "Vicente Assunção Souza",
+		Description: "updated",
+	}
+	r, err = SaveCustomer(UPDATE, &c)
 	checkTestError(err, t)
 	fmt.Printf("Request status: %t\n", r)
 	fmt.Printf("Costumer: %+v\n", c)
 }
 
 func TestSearchCustomer(t *testing.T) {
-	var sc = SearchCustomersParams{
+	sc := SearchCustomersParams{
 		Offset: 0,
 		Limit:  5,
 	}
@@ -45,18 +57,6 @@ func TestGetCustomer(t *testing.T) {
 	c, err := GetCustomer(cid)
 	checkTestError(err, t)
 	fmt.Printf("User found: %+v", c)
-}
-
-func TestUpdateCustomer(t *testing.T) {
-	var c = Customer{
-		ID:             "327319823-TjF62w7HJBkxIy",
-		LastName:       "Vicente Assunção Souza",
-		Description: "updated",
-	}
-	r, err := UpdateCustomer(&c)
-	checkTestError(err, t)
-	fmt.Printf("Request status: %t\n", r)
-	fmt.Printf("Costumer: %+v\n", c)
 }
 
 func checkTestError(err error, t *testing.T) {
