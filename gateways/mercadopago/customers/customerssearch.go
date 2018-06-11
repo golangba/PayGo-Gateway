@@ -37,7 +37,13 @@ func (sc SearchCustomersParams) GetUrl() (string, error) {
 	return url, nil
 }
 func (sc *SearchCustomersParams) SetResponse(b []byte) error {
-	err := json.Unmarshal(b, &sc)
+	err := json.Unmarshal(b, &response)
+	if err != nil {
+		return err
+	} else if m, ok:= response["message"]; !ok{
+		return fmt.Errorf("mercado pago message: %v;\n Cause:%+v", m, response["cause"])
+	}
+	err = json.Unmarshal(b, &sc)
 	if err != nil {
 		return err
 	}

@@ -11,34 +11,34 @@ import (
 )
 
 type Phone struct {
-	AreaCode string `json:"area_code" url:"area_code,omitempty"`
-	Number   string `json:"number" url:"number,omitempty"`
+	AreaCode string `json:"area_code,omitempty" url:"area_code,omitempty"`
+	Number   string `json:"number,omitempty" url:"number,omitempty"`
 }
 
 type Identification struct {
-	Type   string `json:"type" url:"type,omitempty"`
-	Number string `json:"number" url:"number,omitempty"`
+	Type   string `json:"type,omitempty" url:"type,omitempty"`
+	Number string `json:"number,omitempty" url:"number,omitempty"`
 }
 
 type Address struct {
 	ID           string `json:"id,omitempty" url:"id,omitempty"`
-	ZipCode      string `json:"zip_code" url:"zip_code,omitempty"`
-	StreetName   string `json:"street_name" url:"street_name,omitempty"`
+	ZipCode      string `json:"zip_code,omitempty" url:"zip_code,omitempty"`
+	StreetName   string `json:"street_name,omitempty" url:"street_name,omitempty"`
 	StreetNumber uint   `json:"street_number,omitempty" url:"street_number,omitempty"`
 }
 
 type Customer struct {
-	mercadopago.MercadoPagoBase `json:"-" url:"-,omitempty"`
+	mercadopago.MercadoPagoBase `json:"-" url:"-"`
 	action                      action
 	ID                          string         `json:"id,omitempty" url:"id,omitempty"`
-	Email                       string         `json:"email" url:"email,omitempty"`
-	FirstName                   string         `json:"first_name" url:"first_name,omitempty"`
-	LastName                    string         `json:"last_name" url:"last_name,omitempty"`
-	Phone                       Phone          `json:"phone" url:"phone,omitempty"`
-	Identification              Identification `json:"identification" url:"identification,omitempty"`
-	Address                     Address        `json:"address" url:"address,omitempty"`
-	DateRegistered              string         `json:"date_registered" url:"date_registered,omitempty"`
-	Description                 string         `json:"description" url:"description,omitempty"`
+	Email                       string         `json:"email,omitempty" url:"email,omitempty"`
+	FirstName                   string         `json:"first_name,omitempty" url:"first_name,omitempty"`
+	LastName                    string         `json:"last_name,omitempty" url:"last_name,omitempty"`
+	Phone                       Phone          `json:"phone,omitempty" url:"phone,omitempty"`
+	Identification              Identification `json:"identification,omitempty" url:"identification,omitempty"`
+	Address                     Address        `json:"address,omitempty" url:"address,omitempty"`
+	DateRegistered              string         `json:"date_registered,omitempty" url:"date_registered,omitempty"`
+	Description                 string         `json:"description,omitempty" url:"description,omitempty"`
 	DateCreated                 string         `json:"date_created,omitempty" url:"date_created,omitempty"`
 	DateLastUpdated             string         `json:"date_last_updated,omitempty" url:"date_last_updated,omitempty"`
 	Metadata                    interface{}    `json:"metadata,omitempty" url:"metadata,omitempty"`
@@ -57,6 +57,8 @@ const (
 	update
 	search
 )
+
+var response map[string]interface{}
 
 func (c Customer) GetUrl() (string, error) {
 	conf, err := config.GetConfig()
@@ -82,7 +84,14 @@ func (c Customer) GetMethod() string {
 }
 
 func (c *Customer) SetResponse(b []byte) error {
-	err := json.Unmarshal(b, &c)
+	err := json.Unmarshal(b, &response)
+	if err != nil {
+		return err
+	} else if m, ok:= response["message"]; ok{
+		return fmt.Errorf("mercado pago message: %v;\n Cause:%+v", m, response["cause"])
+	}
+
+	err = json.Unmarshal(b, c)
 	if err != nil {
 		return err
 	}
@@ -97,15 +106,24 @@ func CreateCustomer(c *Customer) (bool, error) {
 	}
 	return true, nil
 }
+func UpdateCustomer(c *Customer) (bool, error) {
+	c.action = update
+	if len(c.ID) == 0 {
+		return false, fmt.Errorf("invalid Customer.ID")
+	}
+	_, err := sendrequest.SendRequest(c)
+	if err != nil {
+		return false, err
+	}
+	return true, nil
+}
 
 func GetCustomer(cid string) (*Customer, error) {
 	c := &Customer{action: get, ID: cid}
-
 	_, err := sendrequest.SendRequest(c)
 	if err != nil {
 		return nil, err
 	}
-
 	return c, nil
 }
 
@@ -119,7 +137,9 @@ func mountUrl(c Customer, conf *config.Config) (string, error) {
 			return "", err
 		}
 	}
+
 	urlParams := conf.ApiToken
+
 	switch c.action {
 	case get, update:
 		route, err := config.GetRoute(fmt.Sprintf("customers.%s", routeName))
@@ -136,6 +156,6 @@ func mountUrl(c Customer, conf *config.Config) (string, error) {
 	default:
 		return "", fmt.Errorf("user action not allowed")
 	}
-	fmt.Println(url)
+
 	return url, nil
 }

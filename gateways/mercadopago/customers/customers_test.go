@@ -47,6 +47,18 @@ func TestGetCustomer(t *testing.T) {
 	fmt.Printf("User found: %+v", c)
 }
 
+func TestUpdateCustomer(t *testing.T) {
+	var c = Customer{
+		ID:             "327319823-TjF62w7HJBkxIy",
+		LastName:       "Vicente Assunção Souza",
+		Description: "updated",
+	}
+	r, err := UpdateCustomer(&c)
+	checkTestError(err, t)
+	fmt.Printf("Request status: %t\n", r)
+	fmt.Printf("Costumer: %+v\n", c)
+}
+
 func checkTestError(err error, t *testing.T) {
 	if err != nil {
 		t.Errorf("Error: %s", err)
