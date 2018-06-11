@@ -29,7 +29,7 @@ type Address struct {
 
 type Customer struct {
 	mercadopago.MercadoPagoBase `json:"-" url:"-"`
-	action                      action
+	action                      mercadopago.Action
 	ID                          string         `json:"id,omitempty" url:"id,omitempty"`
 	Email                       string         `json:"email,omitempty" url:"email,omitempty"`
 	FirstName                   string         `json:"first_name,omitempty" url:"first_name,omitempty"`
@@ -49,10 +49,8 @@ type Customer struct {
 	LiveMode                    bool           `json:"live_mode,omitempty" url:"live_mode,omitempty"`
 }
 
-type action uint8
-
 const (
-	CREATE action = iota
+	CREATE mercadopago.Action = iota
 	GET
 	UPDATE
 	SEARCH
@@ -99,7 +97,7 @@ func (c *Customer) SetResponse(b []byte) error {
 }
 
 //create and update customer
-func SaveCustomer(action action, c *Customer) (bool, error) {
+func SaveCustomer(action mercadopago.Action, c *Customer) (bool, error) {
 	switch action {
 	case CREATE:
 		c.action = CREATE

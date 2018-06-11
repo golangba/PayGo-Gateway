@@ -8,6 +8,7 @@ import (
 )
 
 type MercadoPagoBase struct{}
+type Action uint8
 
 func (m MercadoPagoBase) GetContentType() (string, error) {
 	conf, err := config.GetConfig()

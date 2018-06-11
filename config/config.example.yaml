@@ -2,7 +2,7 @@ appVersion: 0.1
 appName: PayGoGateway
 config: ""
 config:
-  config:
+  mercadopago:
     apiUrl: "https://api.mercadopago.com"
     apiVersion: "v1"
     apiClientID: "your-client-id"

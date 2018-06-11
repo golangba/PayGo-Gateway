@@ -34,18 +34,18 @@ func GetConfig() (*Config, error) {
 		return conf, nil
 	}
 	conf := new(Config)
-	conf.ApiUrl = viper.GetString("config.config.apiUrl")
-	conf.ApiVersion = viper.GetString("config.config.apiVersion")
-	conf.ApiClientID = viper.GetString("config.config.apiClientID")
-	conf.ApiClientSecret = viper.GetString("config.config.apiClientSecret")
-	conf.ApiToken = viper.GetString("config.config.apiToken")
-	conf.Charset = viper.GetString("config.config.charset")
+	conf.ApiUrl = viper.GetString("config.mercadopago.apiUrl")
+	conf.ApiVersion = viper.GetString("config.mercadopago.apiVersion")
+	conf.ApiClientID = viper.GetString("config.mercadopago.apiClientID")
+	conf.ApiClientSecret = viper.GetString("config.mercadopago.apiClientSecret")
+	conf.ApiToken = viper.GetString("config.mercadopago.apiToken")
+	conf.Charset = viper.GetString("config.mercadopago.charset")
 
 	return conf, nil
 }
 
 func GetRoute(r string) (string, error) {
-	routeName := fmt.Sprintf("config.routes.%s", r)
+	routeName := fmt.Sprintf("config.mercadopago.routes.%s", r)
 	route := viper.GetString(routeName)
 	if len(route) == 0 {
 		return route, fmt.Errorf("empty route")
